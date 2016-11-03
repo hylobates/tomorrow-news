@@ -4,7 +4,7 @@
 	position:absolute;
 	top:0;
 	.row{
-		background:#ffafc9;
+		background:#ff5174;
 		color:#fff;
 		line-height:34px;
 		font-size: 14px;
@@ -18,11 +18,11 @@
 	.input-group{
 		.input-group-addon{
 			background: #fff;
-			border-right: none;
+			border: none;
 			color:#ddd;
 		}
 		input{
-			border-left: none;
+			border: none;
 		}
 	}
 	.row:nth-child(2){
@@ -63,6 +63,7 @@
 	top:75px;
 	left:0;
 	bottom:45px;
+	.connect-left
 }
 /*----footerstart----*/ 
 #footer{

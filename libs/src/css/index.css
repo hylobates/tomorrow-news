@@ -4,7 +4,7 @@
   position: absolute;
   top: 0; }
   #header .row {
-    background: #ffafc9;
+    background: #ff5174;
     color: #fff;
     line-height: 34px;
     font-size: 14px;
@@ -15,10 +15,10 @@
       padding: 0 5px; }
   #header .input-group .input-group-addon {
     background: #fff;
-    border-right: none;
+    border: none;
     color: #ddd; }
   #header .input-group input {
-    border-left: none; }
+    border: none; }
   #header .row:nth-child(2) {
     color: #000;
     background: #efefef;
