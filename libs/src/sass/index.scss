@@ -1,8 +1,10 @@
 /*----headerstart----*/
 #header{
 	width:100%;
-	position:absolute;
+	position:fixed;
 	top:0;
+	bottom:75px;
+	z-index:9;
 	.row{
 		background:#ff5174;
 		color:#fff;
@@ -39,8 +41,7 @@
     }
     .swiper-slide {
         text-align: center;
-        font-size: 15px;
-        
+        font-size: 15px;       
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -63,7 +64,22 @@
 	top:75px;
 	left:0;
 	bottom:45px;
-	.connect-left
+	.connect-left{
+		width: 68%;
+		display: inline-block;
+		// float: left;
+	}
+	.list-group-item{
+		margin: 0;
+	}
+	.connect-right{
+		width: 30%;
+		display: inline-block;
+		// float: right;
+		img{
+			width: 100%;
+		}
+	}
 }
 /*----footerstart----*/ 
 #footer{

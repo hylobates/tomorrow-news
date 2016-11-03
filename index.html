@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="libs/plugin/angularjs/angular.min.js"></script>
 	<script type="text/javascript" src="libs/plugin/Swiper-3.3.1/dist/js/swiper.min.js"></script>
 	<script type="text/javascript" src="libs/build/js/global.angular.min.js"></script>
-	<script type="text/javascript" src="libs/src/js/index.js"></script>
+	<script type="text/javascript" src="libs/build/js/index.min.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -44,9 +44,15 @@
 </div>
 <div id="section" ng-app="connect" ng-controller="newsconnect">
 	<!-- <div class="container-fluid"> -->
-		<ul class="list-group" ng-repeat="m in obj">
-			<li  class="list-group-item" ng-bind="m.title">
-				
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="m in obj">
+				<div class="connect-left">
+					<p>{{m.title}}</p>
+					<p ><span>{{m.channelName}}</span>&nbsp;&nbsp;&nbsp;<span>{{m.pubDate}}</span></p>
+				</div>
+				<div class="connect-right" ng-if="m.imageurls[0].url? true:false">
+					<img src="{{m.imageurls[0].url}}" a="{{x[0]}}">
+				</div>
 			</li>
 		</ul>
 	<!-- </div> -->

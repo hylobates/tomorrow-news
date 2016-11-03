@@ -1,8 +1,10 @@
 /*----headerstart----*/
 #header {
   width: 100%;
-  position: absolute;
-  top: 0; }
+  position: fixed;
+  top: 0;
+  bottom: 75px;
+  z-index: 9; }
   #header .row {
     background: #ff5174;
     color: #fff;
@@ -52,6 +54,16 @@
   top: 75px;
   left: 0;
   bottom: 45px; }
+  #section .connect-left {
+    width: 68%;
+    display: inline-block; }
+  #section .list-group-item {
+    margin: 0; }
+  #section .connect-right {
+    width: 30%;
+    display: inline-block; }
+    #section .connect-right img {
+      width: 100%; }
 
 /*----footerstart----*/
 #footer {
