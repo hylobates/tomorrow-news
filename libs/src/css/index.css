@@ -1,10 +1,11 @@
 /*----headerstart----*/
 #header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
-  bottom: 75px;
   z-index: 9; }
+  #header a {
+    color: #000; }
   #header .row {
     background: #ff5174;
     color: #fff;
@@ -52,8 +53,8 @@
   width: 100%;
   position: absolute;
   top: 75px;
-  left: 0;
-  bottom: 45px; }
+  bottom: 45px;
+  overflow: auto; }
   #section .connect-left {
     width: 68%;
     display: inline-block; }

@@ -4,17 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="libs/plugin/bootstrap-3.3.5/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/angular-loading-bar/0.9.0/loading-bar.min.css">
 	<link rel="stylesheet" type="text/css" href="libs/plugin/font-awesome-4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="libs/plugin/Swiper-3.3.1/dist/css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="libs/build/css/global.min.css">
 	<link rel="stylesheet" type="text/css" href="libs/build/css/index.min.css">
 	<title>明日新闻</title>
 	<script type="text/javascript" src="libs/plugin/angularjs/angular.min.js"></script>
+	<script type="text/javascript" src="libs/plugin/angular-ui/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="//cdn.bootcss.com/angular-loading-bar/0.9.0/loading-bar.min.js"></script>
 	<script type="text/javascript" src="libs/plugin/Swiper-3.3.1/dist/js/swiper.min.js"></script>
-	<script type="text/javascript" src="libs/build/js/global.angular.min.js"></script>
-	<script type="text/javascript" src="libs/build/js/index.min.js"></script>
+	<script type="text/javascript" src="libs/src/js/global.angular.js"></script>
+	<script type="text/javascript" src="libs/src/js/index.js"></script>
 </head>
-<body>
+<body ng-app="connect"  ng-click="change($index,$event)">
 	<div id="header">
 	<div class="container-fluid">
 		<div class="row">
@@ -30,32 +33,20 @@
 			<!-- Swiper -->
 			<div class="swiper-container">
 			    <div class="swiper-wrapper">
-			        <div class="swiper-slide active">推荐</div>
-			        <div class="swiper-slide">国内</div>
-			        <div class="swiper-slide">娱乐</div>
-			        <div class="swiper-slide">军事</div>
-			        <div class="swiper-slide">体育</div>
-			        <div class="swiper-slide">社会</div>
+			        <div class="swiper-slide"><a href="#/recommend">推荐</a></div>
+			        <div class="swiper-slide"><a href="#/home">国内</a></div>
+			        <div class="swiper-slide"><a href="#/distraction">娱乐</a></div>
+			        <div class="swiper-slide"><a href="#/military">军事</a></div>
+			        <div class="swiper-slide"><a href="#/sports">体育</a></div>
+			        <div class="swiper-slide"><a href="#/social">社会</a></div>
 			    </div>
 			        <!-- Add Pagination -->
 			 </div>
 		</div>
 	</div>
 </div>
-<div id="section" ng-app="connect" ng-controller="newsconnect">
-	<!-- <div class="container-fluid"> -->
-		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="m in obj">
-				<div class="connect-left">
-					<p>{{m.title}}</p>
-					<p ><span>{{m.channelName}}</span>&nbsp;&nbsp;&nbsp;<span>{{m.pubDate}}</span></p>
-				</div>
-				<div class="connect-right" ng-if="m.imageurls[0].url? true:false">
-					<img src="{{m.imageurls[0].url}}" a="{{x[0]}}">
-				</div>
-			</li>
-		</ul>
-	<!-- </div> -->
+<div id="section">
+	<div data-ui-view=""></div>
 </div>
 	<div id="footer"></div>
 </body>
