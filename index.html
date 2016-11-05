@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="libs/plugin/angularjs/angular.min.js"></script>
 	<script type="text/javascript" src="libs/plugin/angular-ui/angular-ui-router.min.js"></script>
 	<script type="text/javascript" src="//cdn.bootcss.com/angular-loading-bar/0.9.0/loading-bar.min.js"></script>
+	<!-- <script type="text/javascript" src="libs/plugin/gifffer.js"></script> -->
 	<script type="text/javascript" src="libs/plugin/Swiper-3.3.1/dist/js/swiper.min.js"></script>
 	<script type="text/javascript" src="libs/src/js/global.angular.js"></script>
 	<script type="text/javascript" src="libs/src/js/index.js"></script>
@@ -23,17 +24,17 @@
 		<div class="row">
 			<div class="col-xs-3">明日头条</div>
 				<div class="col-xs-9">
-					<div class="input-group">
-					  <span class="input-group-addon"><i class="fa fa-search"></i></span>
-					  <input type="text" class="form-control" placeholder="搜你想搜的">
+					<div class="input-group" ng-controller="search">
+					  <span class="input-group-addon" ng-click="search()"><a href="#/search"><i class="fa fa-search"></i></a></span>
+					  <input type="text" class="form-control" placeholder="搜你想搜的" ng-model="title" alt="{{title}}">
 					</div>
 				</div>
 		</div>
 		<div class="row">
 			<!-- Swiper -->
 			<div class="swiper-container">
-			    <div class="swiper-wrapper">
-			        <div class="swiper-slide"><a href="#/recommend">推荐</a></div>
+			    <div class="swiper-wrapper" ng-controller="changecolor" ng-click="show($index,$event)">
+			        <div class="swiper-slide"><a href="#/recommend" class="active">推荐</a></div>
 			        <div class="swiper-slide"><a href="#/home">国内</a></div>
 			        <div class="swiper-slide"><a href="#/distraction">娱乐</a></div>
 			        <div class="swiper-slide"><a href="#/military">军事</a></div>
