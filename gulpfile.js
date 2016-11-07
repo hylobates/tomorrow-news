@@ -7,6 +7,8 @@ var concat = require('gulp-concat')//合并文件
 var uglify = require('gulp-uglify')//压缩
 var rename = require('gulp-rename');//重命名
 var minicss = require('gulp-clean-css');
+var autoprefixer = require('gulp-autoprefixer');//cs3前缀自动补全
+var connect = require('gulp-connect');//服务器
 
 //在编译之前检查js脚本是否全部正确
 gulp.task('minijs',function(){
@@ -30,7 +32,13 @@ gulp.task('minicss',function(){
 gulp.task('sass',function(){
 	gulp.src('libs/src/sass/*.scss')
 	.pipe(sass())
+	.pipe(autoprefixer())
 	.pipe(gulp.dest('libs/src/css'));
+})
+
+//服务器
+gulp.task('connect',function(){
+	connect.server();
 })
 
 //创建watch任务去检测html文件，其定义了当html改动之后，去调用一个Gulp的Task
@@ -38,10 +46,12 @@ gulp.task('watch',function(){
 	gulp.watch(['libs/src/js/*.js'],['minijs']);
 	gulp.watch(['libs/src/css/*.css'],['minicss']);
 	gulp.watch(['libs/src/sass/*.scss'],['sass']);
+
 })
 
 //默认任务
 //gulp defalut
 gulp.task('default',function(){
 	gulp.run('watch');
+	gulp.run('connect');
 })

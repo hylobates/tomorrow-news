@@ -1,4 +1,5 @@
 /*----headerstart----*/
+@import 'common';
 #header{
 	width:100%;
 	position:absolute;
@@ -65,8 +66,12 @@
 	bottom:45px;
 }
 /*----footerstart----*/ 
-#footer{
+.footer{
 	position:absolute;
 	height:45px;
 	bottom:0;
+	width: 100%;
+	.home-active {
+        color: $maincolor;
+    }
 }

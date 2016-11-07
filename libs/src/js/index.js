@@ -5,4 +5,9 @@
         paginationClickable: true,
         spaceBetween: 0
     });	// body...
- }
+ };
+ var app = angular.module('indexApp',['globelApp']);
+ // 无controller时脚页加载不了。。。
+ app.controller('indexCtr',function(){
+
+ });

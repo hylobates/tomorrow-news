@@ -8,13 +8,15 @@
 	<link rel="stylesheet" type="text/css" href="libs/plugin/Swiper-3.3.1/dist/css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="libs/build/css/global.min.css">
 	<link rel="stylesheet" type="text/css" href="libs/build/css/index.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/plugin/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/build/css/footer.min.css">
 	<title>明日新闻</title>
 	<script type="text/javascript" src="libs/plugin/angularjs/angular.min.js"></script>
 	<script type="text/javascript" src="libs/plugin/Swiper-3.3.1/dist/js/swiper.min.js"></script>
 	<script type="text/javascript" src="libs/build/js/global.angular.min.js"></script>
 	<script type="text/javascript" src="libs/build/js/index.min.js"></script>
 </head>
-<body>
+<body ng-app="indexApp" ng-controller="indexCtr">
 	<div id="header">
 	<div class="container-fluid">
 		<div class="row">
@@ -47,6 +49,8 @@
 			123
 	</div>
 </div>
-	<div id="footer"></div>
+	<load-footer class="footer">
+		
+	</load-footer>
 </body>
 </html>
