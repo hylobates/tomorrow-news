@@ -11,9 +11,14 @@ html, body {
 #header {
   width: 100%;
   position: absolute;
-  top: 0; }
+  top: 0;
+  z-index: 9; }
+  #header a:nth-child(1) {
+    display: block; }
+  #header a {
+    color: #000; }
   #header .row {
-    background: #ffafc9;
+    background: #ff5174;
     color: #fff;
     line-height: 34px;
     font-size: 14px;
@@ -24,10 +29,10 @@ html, body {
       padding: 0 5px; }
   #header .input-group .input-group-addon {
     background: #fff;
-    border-right: none;
+    border: none;
     color: #ddd; }
   #header .input-group input {
-    border-left: none; }
+    border: none; }
   #header .row:nth-child(2) {
     color: #000;
     background: #efefef;
@@ -56,8 +61,24 @@ html, body {
   width: 100%;
   position: absolute;
   top: 75px;
-  left: 0;
-  bottom: 45px; }
+  bottom: 45px;
+  overflow: auto; }
+  #section .connect-left {
+    width: 68%;
+    display: inline-block; }
+  #section .list-group-item {
+    margin: 0; }
+    #section .list-group-item p {
+      margin: 0; }
+  #section .connect-right {
+    width: 30%;
+    display: inline-block; }
+    #section .connect-right img {
+      width: 100%; }
+  #section .timer {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px; }
 
 /*----footerstart----*/
 .footer {
